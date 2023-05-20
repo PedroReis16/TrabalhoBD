@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TrabalhoBD
 {
-    public partial class Form1 : Form
+    public partial class OpcoesIniciais : UserControl
     {
-        public Form1()
+        public OpcoesIniciais()
         {
             InitializeComponent();
         }
