@@ -49,11 +49,11 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(39, 72);
+            this.chart1.Location = new System.Drawing.Point(39, 87);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
+            series1.Name = "vendas";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1045, 506);
             this.chart1.TabIndex = 1;

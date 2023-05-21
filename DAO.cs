@@ -82,7 +82,32 @@ namespace TrabalhoBD
         }
         public static List<MaioresPrejuizos> MaioresPrejuizos()
         {
+            string select = "select top(5) o.nome,l.soma_valor_realizado " +
+                "from orgaos_menos_lucrativos() l " +
+                "Inner join orgao o on o.codigo = l.codigo_orgao " +
+                "order by l.soma_valor_realizado asc ";
+            List<MaioresPrejuizos> prejuizos = new List<MaioresPrejuizos>();
 
+            using (SqlConnection banco = new SqlConnection(ConnectionString))
+            {
+                banco.Open();
+
+                SqlCommand comando = new SqlCommand(select, banco);
+
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        MaioresPrejuizos prejuizo = new MaioresPrejuizos()
+                        {
+                            Nome = reader.GetString(0),
+                            Valor = reader.GetDecimal(1)
+                        };
+                        prejuizos.Add(prejuizo);
+                    }
+                }
+            }
+            return prejuizos;
         }
     }
     

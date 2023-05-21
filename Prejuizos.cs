@@ -18,12 +18,33 @@ namespace TrabalhoBD
         {
             InitializeComponent();
             this.menu = menu;
+            GraficoColunas();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             TelaPrincipal.Voltar();
         }
-       
+        private void GraficoColunas()
+        {
+            Title title = new Title();
+            title.Font = new Font("Arial", 14, FontStyle.Bold);
+            title.ForeColor = Color.Black;
+            title.Text = "Órgãos menos lucrativos";
+            chart1.Titles.Add(title);
+
+            chart1.Series.Add("Vendas");
+            //chart1.Series["vendas"].LegendText = "Vendas";
+
+            chart1.Series["vendas"].ChartType = SeriesChartType.Column;
+            chart1.Series["vendas"].BorderWidth = 4;
+
+            List<MaioresPrejuizos> orgaos = DAO.MaioresPrejuizos();
+
+            for (int i = 0; i < orgaos.Count; i++)
+            {
+                chart1.Series["vendas"].Points.AddXY(orgaos[i].Nome, orgaos[i].Valor);
+            }
+        }
     }
 }
