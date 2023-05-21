@@ -12,65 +12,67 @@ namespace TrabalhoBD
 {
     public partial class TelaPrincipal : Form
     {
+        static Panel Painel;
         public TelaPrincipal()
         {
             InitializeComponent();
+            Painel = PainelPrincipal;
             LoadView();
         }
 
-        private void LoadView()
+        private static void LoadView()
         {
             OpcoesIniciais opcoes = new OpcoesIniciais();
 
-            opcoes.Parent = PainelPrincipal;
+            opcoes.Parent = Painel;
             opcoes.Dock = DockStyle.Fill;
             opcoes.Show();
         }
-        public void CarregarVisaoGeral()
+        public static void VisaoGeral()
         {
-            PainelPrincipal.Controls.Clear();
+            Painel.Controls.Clear();
 
             PesquisaGeral pesquisa = new PesquisaGeral();
 
-            pesquisa.Parent = PainelPrincipal;
+            pesquisa.Parent = Painel;
             pesquisa.Dock = DockStyle.Fill;
             pesquisa.Show();
         }
-        public void OrgaosLucrativos()
+        public static void OrgaosLucrativos()
         {
-            PainelPrincipal.Controls.Clear();
+            Painel.Controls.Clear();
 
             OrgaosLucrativos orgaos = new OrgaosLucrativos();
 
-            orgaos.Parent = PainelPrincipal;
+            orgaos.Parent = Painel;
             orgaos.Dock = DockStyle.Fill;
             orgaos.Show();
         }
 
-        public void Receitas()
+        public static void Receitas()
         {
-            PainelPrincipal.Controls.Clear();
+            Painel.Controls.Clear();
 
             Receitas receitas = new Receitas();
 
-            receitas.Parent = PainelPrincipal;
+            receitas.Parent = Painel;
             receitas.Dock = DockStyle.Fill;
             receitas.Show();
         }
-        public void Prejuizos()
+        public static void Prejuizos()
         {
-            PainelPrincipal.Controls.Clear();
+            Painel.Controls.Clear();
 
             Prejuizos prejuizos = new Prejuizos();
 
-            prejuizos.Parent = PainelPrincipal;
+            prejuizos.Parent = Painel;
             prejuizos.Dock = DockStyle.Fill;
             prejuizos.Show();
         }
 
-        public void Voltar()
+        public static void Voltar()
         {
-            PainelPrincipal.Controls.Clear();
+            Painel.Controls.Clear();
 
             LoadView();
         }

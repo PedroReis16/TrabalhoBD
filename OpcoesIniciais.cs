@@ -19,19 +19,19 @@ namespace TrabalhoBD
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            TelaPrincipal.VisaoGeral();
         }
         private void button2_Click(object sender, EventArgs e)
         {
-
+            TelaPrincipal.Receitas();
         }
         private void button3_Click(object sender, EventArgs e)
         {
-
+            TelaPrincipal.OrgaosLucrativos();
         }
         private void button4_Click(object sender, EventArgs e)
         {
-
+            TelaPrincipal.Prejuizos();
         }
     }
 }
