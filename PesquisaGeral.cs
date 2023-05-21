@@ -12,9 +12,11 @@ namespace TrabalhoBD
 {
     public partial class PesquisaGeral : UserControl
     {
-        public PesquisaGeral()
+        TelaPrincipal menu;
+        public PesquisaGeral(TelaPrincipal menu)
         {
             InitializeComponent();
+            this.menu = menu;
         }
     }
 }

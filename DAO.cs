@@ -20,7 +20,7 @@ namespace TrabalhoBD
         }
         private void CriandoConexao()
         {
-            string ConnectionString = @"Data Source=LAPTOP-D735TSMJ\SQLEXPRESS; Initial Catalog=receitas2;Integrated Security = True";
+            string ConnectionString = @"Data Source=DESKTOP-UC14HQT; Initial Catalog=receitas2;User ID=sa;Password=123456";
             banco = new SqlConnection(ConnectionString);
         }
     }

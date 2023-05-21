@@ -12,9 +12,11 @@ namespace TrabalhoBD
 {
     public partial class Prejuizos : UserControl
     {
-        public Prejuizos()
+        TelaPrincipal menu;
+        public Prejuizos(TelaPrincipal menu)
         {
             InitializeComponent();
+            this.menu = menu;
         }
     }
 }

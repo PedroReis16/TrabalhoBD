@@ -12,9 +12,11 @@ namespace TrabalhoBD
 {
     public partial class Receitas : UserControl
     {
-        public Receitas()
+        TelaPrincipal menu;
+        public Receitas(TelaPrincipal menu)
         {
             InitializeComponent();
+            this.menu = menu; 
         }
     }
 }

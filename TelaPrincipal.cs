@@ -12,11 +12,14 @@ namespace TrabalhoBD
 {
     public partial class TelaPrincipal : Form
     {
+        static TelaPrincipal tela;
         static Panel Painel;
+        DAO dao = new DAO();
         public TelaPrincipal()
         {
             InitializeComponent();
             Painel = PainelPrincipal;
+            tela = this;
             LoadView();
         }
 
@@ -32,7 +35,7 @@ namespace TrabalhoBD
         {
             Painel.Controls.Clear();
 
-            PesquisaGeral pesquisa = new PesquisaGeral();
+            PesquisaGeral pesquisa = new PesquisaGeral(tela);
 
             pesquisa.Parent = Painel;
             pesquisa.Dock = DockStyle.Fill;
@@ -42,7 +45,7 @@ namespace TrabalhoBD
         {
             Painel.Controls.Clear();
 
-            OrgaosLucrativos orgaos = new OrgaosLucrativos();
+            OrgaosLucrativos orgaos = new OrgaosLucrativos(tela);
 
             orgaos.Parent = Painel;
             orgaos.Dock = DockStyle.Fill;
@@ -53,7 +56,7 @@ namespace TrabalhoBD
         {
             Painel.Controls.Clear();
 
-            Receitas receitas = new Receitas();
+            Receitas receitas = new Receitas(tela);
 
             receitas.Parent = Painel;
             receitas.Dock = DockStyle.Fill;
@@ -63,7 +66,7 @@ namespace TrabalhoBD
         {
             Painel.Controls.Clear();
 
-            Prejuizos prejuizos = new Prejuizos();
+            Prejuizos prejuizos = new Prejuizos(tela);
 
             prejuizos.Parent = Painel;
             prejuizos.Dock = DockStyle.Fill;

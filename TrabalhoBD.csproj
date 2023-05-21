@@ -89,6 +89,12 @@
     <EmbeddedResource Include="OpcoesIniciais.resx">
       <DependentUpon>OpcoesIniciais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrgaosLucrativos.resx">
+      <DependentUpon>OrgaosLucrativos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prejuizos.resx">
+      <DependentUpon>Prejuizos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>

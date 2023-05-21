@@ -12,9 +12,16 @@ namespace TrabalhoBD
 {
     public partial class OrgaosLucrativos : UserControl
     {
-        public OrgaosLucrativos()
+        TelaPrincipal menu;
+        public OrgaosLucrativos(TelaPrincipal menu)
         {
             InitializeComponent();
+            this.menu = menu;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
