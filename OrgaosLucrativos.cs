@@ -39,18 +39,11 @@ namespace TrabalhoBD
             chart1.Series["vendas"].ChartType = SeriesChartType.Column;
             chart1.Series["vendas"].BorderWidth = 4;
 
-            List<OrgaoLucrativos> orgaos = DAO.OrgaosLucrativos();
+            List<OrgaosLucros> orgaos = DAO.OrgaosLucrativos();
 
-            List<decimal> valores = new List<decimal>();
-
-            foreach (OrgaoLucrativos i in orgaos)
+            for (int i = 0; i < orgaos.Count; i++)
             {
-                valores.Add(i.valor);
-            }
-
-            for (int i = 0; i < valores.Count; i++)
-            {
-                chart1.Series["vendas"].Points.AddXY(i, valores[i]);
+                chart1.Series["vendas"].Points.AddXY(orgaos[i].Nome, orgaos[i].Valor);
             }
         }
     }

@@ -48,19 +48,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO.cs" />
+    <Compile Include="MaioresPrejuizos.cs" />
     <Compile Include="OpcoesIniciais.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OpcoesIniciais.Designer.cs">
       <DependentUpon>OpcoesIniciais.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrgaoLucrativos.cs" />
+    <Compile Include="MaioresReceitas.cs" />
     <Compile Include="OrgaosLucrativos.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OrgaosLucrativos.Designer.cs">
       <DependentUpon>OrgaosLucrativos.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrgaosLucros.cs" />
     <Compile Include="PesquisaGeral.cs">
       <SubType>UserControl</SubType>
     </Compile>

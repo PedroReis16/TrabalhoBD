@@ -23,11 +23,39 @@ namespace TrabalhoBD
 
             banco = new SqlConnection(ConnectionString);
         }
+        public static List<OrgaosLucros> OrgaosLucrativos()
+        {
+            string select = "select top(5) o.nome,l.soma_valor_realizado " +
+                "from orgaos_mais_lucrativos() l " +
+                "Inner join orgao o on o.codigo = l.codigo_orgao " +
+                "order by l.soma_valor_realizado desc ";
+            List<OrgaosLucros> lucros = new List<OrgaosLucros>();
 
-        public static List<OrgaoLucrativos> OrgaosLucrativos()
+            using (SqlConnection banco = new SqlConnection(ConnectionString))
+            {
+                banco.Open();
+
+                SqlCommand comando = new SqlCommand(select, banco);
+
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        OrgaosLucros lucro = new OrgaosLucros()
+                        {
+                            Nome = reader.GetString(0),
+                            Valor = reader.GetDecimal(1)
+                        };
+                        lucros.Add(lucro);
+                    }
+                }
+            }
+            return lucros;
+        }
+        public static List<MaioresReceitas> MaioresReceitas()
         {
             string lucrativos = "select top(5) * from mais_lucrativos()";
-            List<OrgaoLucrativos> valores = new List<OrgaoLucrativos>();
+            List<MaioresReceitas> valores = new List<MaioresReceitas>();
 
             using (SqlConnection banco = new SqlConnection(ConnectionString))
             {
@@ -39,7 +67,7 @@ namespace TrabalhoBD
                 {
                     while (reader.Read())
                     {
-                        OrgaoLucrativos orgao = new OrgaoLucrativos()
+                        MaioresReceitas orgao = new MaioresReceitas()
                         {
                             codigo = reader.GetInt32(1),
                             nome = reader.GetString(2),
@@ -51,6 +79,10 @@ namespace TrabalhoBD
 
             }
             return valores;
+        }
+        public static List<MaioresPrejuizos> MaioresPrejuizos()
+        {
+
         }
     }
     

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabalhoBD
 {
-    public class OrgaoLucrativos
+    public class MaioresReceitas
     {
         public int codigo { get; set; }
         public string nome { get; set; }
