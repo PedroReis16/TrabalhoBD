@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TrabalhoBD
 {
-    public partial class Grafico3 : UserControl
+    public partial class Receitas : UserControl
     {
-        public Grafico3()
+        public Receitas()
         {
             InitializeComponent();
         }

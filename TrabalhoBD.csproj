@@ -48,35 +48,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO.cs" />
-    <Compile Include="Grafico1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Grafico1.Designer.cs">
-      <DependentUpon>Grafico1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Grafico2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Grafico2.Designer.cs">
-      <DependentUpon>Grafico2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Grafico3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Grafico3.Designer.cs">
-      <DependentUpon>Grafico3.cs</DependentUpon>
-    </Compile>
     <Compile Include="OpcoesIniciais.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OpcoesIniciais.Designer.cs">
       <DependentUpon>OpcoesIniciais.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrgaosLucrativos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrgaosLucrativos.Designer.cs">
+      <DependentUpon>OrgaosLucrativos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PesquisaGeral.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PesquisaGeral.Designer.cs">
       <DependentUpon>PesquisaGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prejuizos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Prejuizos.Designer.cs">
+      <DependentUpon>Prejuizos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receitas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Receitas.Designer.cs">
+      <DependentUpon>Receitas.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
@@ -86,9 +86,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Grafico1.resx">
-      <DependentUpon>Grafico1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OpcoesIniciais.resx">
       <DependentUpon>OpcoesIniciais.cs</DependentUpon>
     </EmbeddedResource>
