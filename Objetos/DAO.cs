@@ -109,6 +109,61 @@ namespace TrabalhoBD
             }
             return prejuizos;
         }
+        public static List<Orgaos> Orgaos()
+        {
+            string select = "select * from orgao";
+            List<Orgaos> orgaos = new List<Orgaos>();
+
+            using (SqlConnection banco = new SqlConnection(ConnectionString))
+            {
+                banco.Open();
+
+                SqlCommand comando = new SqlCommand(select, banco);
+
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Orgaos orgao = new Orgaos()
+                        {
+                            Codigo = reader.GetInt32(0),
+                            Nome = reader.GetString(1)
+                        };
+                        orgaos.Add(orgao);
+                    }
+                }
+            }
+            return orgaos;
+        }
+        public static List<Faturamento> FaturmentoMes(int codigo,int mes)
+        {
+            string select = "SELECT * FROM obter_registros_por_mes(@Mes_Faturamento, @Codigo_Orgao)";
+            List<Faturamento> ganhos = new List<Faturamento>();
+
+            using (SqlConnection banco = new SqlConnection(ConnectionString))
+            {
+                banco.Open();
+
+                SqlCommand comando = new SqlCommand(select, banco);
+                comando.Parameters.AddWithValue("@Codigo_Orgao", codigo);
+                comando.Parameters.AddWithValue("@Mes_Faturamento",mes);
+
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Faturamento faturamento = new Faturamento()
+                        {
+                            Codigo = reader.GetInt32(0),
+                            Descricao = reader.GetString(7),
+                            Valor = reader.GetDecimal(10)
+                        };
+                        ganhos.Add(faturamento);
+                    }
+                }
+            }
+            return ganhos;
+        }
     }
     
 }

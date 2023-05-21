@@ -47,38 +47,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO.cs" />
-    <Compile Include="MaioresPrejuizos.cs" />
-    <Compile Include="OpcoesIniciais.cs">
+    <Compile Include="Objetos\DAO.cs" />
+    <Compile Include="Objetos\Faturamento.cs" />
+    <Compile Include="Objetos\MaioresPrejuizos.cs" />
+    <Compile Include="Telas\OpcoesIniciais.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OpcoesIniciais.Designer.cs">
+    <Compile Include="Telas\OpcoesIniciais.Designer.cs">
       <DependentUpon>OpcoesIniciais.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaioresReceitas.cs" />
-    <Compile Include="OrgaosLucrativos.cs">
+    <Compile Include="Objetos\MaioresReceitas.cs" />
+    <Compile Include="Objetos\Orgaos.cs" />
+    <Compile Include="Telas\OrgaosLucrativos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OrgaosLucrativos.Designer.cs">
+    <Compile Include="Telas\OrgaosLucrativos.Designer.cs">
       <DependentUpon>OrgaosLucrativos.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrgaosLucros.cs" />
-    <Compile Include="PesquisaGeral.cs">
+    <Compile Include="Objetos\OrgaosLucros.cs" />
+    <Compile Include="Telas\PesquisaGeral.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PesquisaGeral.Designer.cs">
+    <Compile Include="Telas\PesquisaGeral.Designer.cs">
       <DependentUpon>PesquisaGeral.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prejuizos.cs">
+    <Compile Include="Telas\Prejuizos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Prejuizos.Designer.cs">
+    <Compile Include="Telas\Prejuizos.Designer.cs">
       <DependentUpon>Prejuizos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Receitas.cs">
+    <Compile Include="Telas\Receitas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Receitas.Designer.cs">
+    <Compile Include="Telas\Receitas.Designer.cs">
       <DependentUpon>Receitas.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaPrincipal.cs">
@@ -89,19 +91,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="OpcoesIniciais.resx">
+    <EmbeddedResource Include="Telas\OpcoesIniciais.resx">
       <DependentUpon>OpcoesIniciais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrgaosLucrativos.resx">
+    <EmbeddedResource Include="Telas\OrgaosLucrativos.resx">
       <DependentUpon>OrgaosLucrativos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PesquisaGeral.resx">
+    <EmbeddedResource Include="Telas\PesquisaGeral.resx">
       <DependentUpon>PesquisaGeral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Prejuizos.resx">
+    <EmbeddedResource Include="Telas\Prejuizos.resx">
       <DependentUpon>Prejuizos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Receitas.resx">
+    <EmbeddedResource Include="Telas\Receitas.resx">
       <DependentUpon>Receitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
