@@ -92,8 +92,14 @@
     <EmbeddedResource Include="OrgaosLucrativos.resx">
       <DependentUpon>OrgaosLucrativos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PesquisaGeral.resx">
+      <DependentUpon>PesquisaGeral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prejuizos.resx">
       <DependentUpon>Prejuizos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receitas.resx">
+      <DependentUpon>Receitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>

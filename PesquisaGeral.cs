@@ -18,5 +18,10 @@ namespace TrabalhoBD
             InitializeComponent();
             this.menu = menu;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaPrincipal.Voltar();
+        }
     }
 }
