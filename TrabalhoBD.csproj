@@ -54,6 +54,7 @@
     <Compile Include="OpcoesIniciais.Designer.cs">
       <DependentUpon>OpcoesIniciais.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrgaoLucrativos.cs" />
     <Compile Include="OrgaosLucrativos.cs">
       <SubType>UserControl</SubType>
     </Compile>
